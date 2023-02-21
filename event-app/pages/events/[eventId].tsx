@@ -7,7 +7,7 @@ import {
 import { GetStaticPropsContext } from "next";
 import EventsContents from "../../component/event-detail/event-content";
 import EventsLogistics from "../../component/event-detail/event-logistics";
-
+import Comments from "../../component/input/comments";
 interface event {
   events: {
     date: string;
@@ -34,6 +34,7 @@ const EventDetail: React.FC<event> = (props) => {
       <EventsContents>
         <p>{props.events.description}</p>
       </EventsContents>
+      <Comments eventId={props.events.id}></Comments>
     </>
   );
 };

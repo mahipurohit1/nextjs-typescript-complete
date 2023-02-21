@@ -1,6 +1,6 @@
 import EventsList from "@/component/events-list";
+import NewsletterRegistration from "../component/input/newsletter-registration";
 import { getFeaturedEvents } from "../component/util/fetch-api";
-
 interface propsData {
   featuredEvent: {
     date: string;
@@ -16,6 +16,7 @@ interface propsData {
 const HomePage: React.FC<propsData> = (props) => {
   return (
     <>
+      <NewsletterRegistration></NewsletterRegistration>
       <EventsList events={props.featuredEvent} />
     </>
   );

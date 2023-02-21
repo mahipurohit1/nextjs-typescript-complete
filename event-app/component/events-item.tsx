@@ -24,7 +24,12 @@ const EventItem: React.FC<event> = (props) => {
   const exploreEvent = `events/${props.id}`;
   return (
     <li className={Styles.item}>
-      <Image src={`/${props.image}`} alt="" width={200} height={200} />
+      <Image
+        src={`/${props.image}`}
+        alt={props.title}
+        width={200}
+        height={200}
+      />
       <div className={Styles.content}>
         <div className={Styles.summary}>
           <h2>{props.title}</h2>
