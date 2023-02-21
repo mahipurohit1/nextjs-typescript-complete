@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import Styles from "./event-item.module.css";
 import Address from "./icons/address-icon";
@@ -23,7 +24,7 @@ const EventItem: React.FC<event> = (props) => {
   const exploreEvent = `events/${props.id}`;
   return (
     <li className={Styles.item}>
-      <img src={`/${props.image}`} alt="" />
+      <Image src={`/${props.image}`} alt="" width={200} height={200} />
       <div className={Styles.content}>
         <div className={Styles.summary}>
           <h2>{props.title}</h2>
