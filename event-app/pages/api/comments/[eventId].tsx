@@ -2,9 +2,7 @@ import { MongoClient } from "mongodb";
 import { NextApiRequest, NextApiResponse } from "next";
 
 async function connection() {
-  const client = await MongoClient.connect(
-    "enter the db link"
-  );
+  const client = await MongoClient.connect("enter the db link");
   return client;
 }
 

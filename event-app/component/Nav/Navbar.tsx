@@ -1,6 +1,10 @@
+import { NotificationContext } from "@/store/Notification-context";
 import Link from "next/link";
+import { useContext } from "react";
+import Notification from "../ui/notification";
 import Style from "./Navbar.module.css";
 const Navbar = () => {
+  const notificationCtx = useContext(NotificationContext);
   return (
     <>
       <header className={Style.header}>
@@ -16,6 +20,13 @@ const Navbar = () => {
           </ul>
         </nav>
       </header>
+      {notificationCtx.notification && (
+        <Notification
+          title={notificationCtx.notification!.title}
+          message={notificationCtx.notification!.message}
+          status={notificationCtx.notification!.status}
+        />
+      )}
     </>
   );
 };
