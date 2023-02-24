@@ -4,9 +4,7 @@ const handler = async (req, res) => {
     const { name, email, password } = req.body;
     console.log(name, email, password);
 
-    const client = await MongoClient.connect(
-      "mongodb+srv://test:test@cluster0.kh5sre0.mongodb.net/?retryWrites=true&w=majority"
-    );
+    const client = await MongoClient.connect("enter db link");
 
     const db = client.db();
 

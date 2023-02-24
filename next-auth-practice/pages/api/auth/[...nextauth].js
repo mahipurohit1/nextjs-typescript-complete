@@ -10,9 +10,7 @@ export default NextAuth({
       async authorize(credentials) {
         const email = credentials.email;
         const password = credentials.password;
-        const client = await MongoClient.connect(
-          "mongodb+srv://test:test@cluster0.kh5sre0.mongodb.net/?retryWrites=true&w=majority"
-        );
+        const client = await MongoClient.connect("enter db link");
 
         const db = client.db();
 
