@@ -1,0 +1,19 @@
+ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+form {
+  width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+form div {
+  padding: 10px;
+}
